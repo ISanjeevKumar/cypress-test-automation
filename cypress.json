@@ -1,5 +1,5 @@
 {
     "viewportWidth": 800,
     "viewportHeight": 620,
-    "baseUrl": "https://www.google.com/"
+    "baseUrl": "http://localhost:4200/"
 }
