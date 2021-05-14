@@ -1,13 +1,18 @@
-describe("Sign up Tests", () => {
+import signupPage from "../../../Pages/signupPage";
 
-    it("Sign up with valid data",()=>{
-       cy.visit('/');
-       cy.get("a[routerlink='/register']").click();
-       cy.get("input[formcontrolname=username]").type("SanjeevKumar00071");
-       cy.get("input[formcontrolname=email]").type("SanjeevKumar00071@demo.com");
-       cy.get("input[formcontrolname=password]").type("SanjeevKumar@123");
-       cy.get("button[type=submit]").click();
-       cy.contains("a","SanjeevKumar00071").should('be.visible');
-       
-    });
+describe("Sign up Tests", () => {
+  beforeEach(() => {
+    cy.visit("/");
+  });
+
+  it("Sign up with valid data", () => {
+    signupPage.goto();
+    signupPage.isSignupPageLoaded();
+    signupPage.signUpWithUserdata(
+      "Naruto_username2",
+      "naruto2@hiddenvillage.com",
+      "naruto@123"
+    );
+    signupPage.isUserSignedUp("Naruto_username2");
+  });
 });

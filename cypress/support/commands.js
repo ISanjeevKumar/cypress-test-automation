@@ -1,8 +1,9 @@
-
 /// <reference types="cypress" />
 
-Cypress.Commands.add("searchText",textToBeSearched=>{
+Cypress.Commands.add("enterText", (text, locator) => {
+  cy.get(locator).type(text);
+});
 
-  cy.get('input[name=q]').type(textToBeSearched).type('{enter}');
-  cy.get('div[id=result-stats').should('contain','results');
+Cypress.Commands.add("performClick", (locator) => {
+  cy.get(locator).click();
 });
