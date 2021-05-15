@@ -1,0 +1,27 @@
+{
+  "name": "cypress-test-automation",
+  "version": "1.0.0",
+  "description": "cypress test automation",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^7.3.0"
+  },
+  "devDependencies": {
+    "faker": "^5.5.3"
+  },
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ISanjeevKumar/cypress-test-automation.git"
+  },
+  "keywords": [],
+  "author": "Sanjeev Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ISanjeevKumar/cypress-test-automation/issues"
+  },
+  "homepage": "https://github.com/ISanjeevKumar/cypress-test-automation#readme"
+}
